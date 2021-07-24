@@ -9,13 +9,12 @@ const server = http.createServer((request, response) => {
     if(_url=='/'){
         _url = '/index/index.html'
     }
-    if(_url=='/bookshelf1'){
+    if(_url=='/bookshelf1'){  
       _url = '/index/bookshelf1.html'
     }
-    if(_url=='/bookshelf2'){
+    if(_url=='/bookshelf2'){  
       _url = '/index/bookshelf2.html'
     }
-
     response.writeHead(200);
     response.end(fs.readFileSync(__dirname+_url));
 });
